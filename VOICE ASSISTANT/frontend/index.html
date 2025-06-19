@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="a--2.gif" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Ai Robot</title>
+</head>
+<body>
+
+    <main class="container" role="main">
+    <img src="a--2.gif" alt="Image 1" />
+    <img src="ai-1.gif" alt="Image 2" />
+
+    <div
+      class="textbar-container"
+      role="search"
+      aria-label="Text input with microphone and send button"
+    >
+      <button
+        type="button"
+        class="microphone-btn"
+        aria-label="Start voice input"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+        >
+          <path
+            d="M12 1v11m0 0a3 3 0 0 0 3-3v-5a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3zM19 11v1a7 7 0 0 1-14 0v-1"
+          />
+          <line x1="12" y1="19" x2="12" y2="23" />
+          <line x1="8" y1="23" x2="16" y2="23" />
+        </svg>
+      </button>
+
+      <input
+        class="text-input"
+        type="text"
+        placeholder="Start typing..."
+        aria-label="Text input"
+        spellcheck="false"
+      />
+
+      <button type="submit" class="send-btn" aria-label="Send message">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </main>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

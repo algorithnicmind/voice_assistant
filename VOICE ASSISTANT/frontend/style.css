@@ -1,0 +1,137 @@
+/* style.css */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #6b7280;
+    --input-bg: #ffffff;
+    --input-border: #e5e7eb;
+    --input-focus-border: #3b82f6;
+    --primary-color: #2563eb;
+    --radius: 0.75rem;
+    --max-width: 1200px;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+main.container {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column; /* Stack text input below images */
+    align-items: center;
+    gap: 2rem; /* vertical spacing */
+}
+
+/* Images displayed horizontally */
+.container img {
+    display: inline-block; /* Allow images to be inline */
+    width: 45%; /* Adjust width as needed */
+    max-width: 200px; /* Limit max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+    margin: 0 1rem; /* Horizontal spacing between images */
+}
+
+/* Text input bar styling */
+.textbar-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    background: var(--input-bg);
+    border: 1.5px solid var(--input-border);
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textbar-container:focus-within {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 10px rgb(38 99 235 / 0.5);
+}
+
+/* Microphone button */
+.microphone-btn {
+    background: transparent;
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.microphone-btn:hover,
+.microphone-btn:focus {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Text input */
+.text-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    background: transparent;
+    color: var(--text-color);
+    min-width: 0;
+}
+
+.text-input::placeholder {
+    color: #a1a5aa;
+}
+
+/* Send button */
+.send-btn {
+    background: transparent;
+    border: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.send-btn:hover,
+.send-btn:focus {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container img {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove horizontal margin */
+        margin-bottom: 1rem; /* Add vertical spacing */
+    }
+}
