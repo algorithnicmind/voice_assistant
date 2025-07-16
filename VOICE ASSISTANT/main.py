@@ -19,13 +19,6 @@ def handle_voice_command(command):
         speak("Goodbye!")
         return "Session ended."
      
-    elif " who is pragyan" in command or "who is gudu" in command:
-         speak("pragyan is a most beatifull girl in your life to whom you love most and also he is always love you sir you both are looks love bird")
-         return "Session ended."
-
-    elif "something for pragyan" in command or "babe" in command:
-         speak("hello pragyan mam i am assitant of ankit sir , ankit sir loves you most and always miss you , he may be sometime  on you but reason befine your love, love you by ankit sir")
-         return "Session ended."
     
     elif open_app(command):
         speak("Opening application.")
